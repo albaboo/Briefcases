@@ -1,1 +1,0 @@
-Proyecto final: Retro Color
