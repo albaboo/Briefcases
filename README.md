@@ -38,7 +38,7 @@
 
 9     -     [Memory con JS](https://github.com/albaboo/Briefcases/tree/main/Memory)
 
-10    -     Proyectos de Java
+10    -     [Proyectos de Java](https://github.com/albaboo/Briefcases/tree/main/ProyectosJava)
 
 > 10.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
 
