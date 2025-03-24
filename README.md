@@ -36,8 +36,10 @@
 
 8     -     [Portal web de ODS](https://github.com/albaboo/Briefcases/tree/main/PortalODS)    
 
-9     -     Proyectos de Java
+9     -     [Memory con JS](https://github.com/albaboo/Briefcases/tree/main/Memory)
 
-> 9.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
+10    -     Proyectos de Java
 
-> 9.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
+> 10.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
+
+> 10.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
