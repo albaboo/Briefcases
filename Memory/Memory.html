@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="Memory.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="Memory.js" defer></script>
+</head>
+<body>
+    <div id="contenidor" class="justify-content-center my-5"></div>
+    <div class="container d-grid gap-3">
+        <div>
+            <label>Selecciona una opción:</label>
+            <select id="opcions">
+                <option value="facil">Facil</option>
+                <option value="mig">Mig</option>
+                <option value="dificil">Dificil</option>
+            </select>
+        </div>
+        <button class="btn btn-outline-dark" onclick="crear()">Inicia</button>
+        <p id="temps">Temps:</p>
+        <p id="punts">Punts: 0</p>
+        <p id="win"></p>
+    </div>
+</body>
+</html>

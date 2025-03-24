@@ -1,0 +1,15 @@
+#contenidor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 4px;
+}
+
+.red{
+    background-color: firebrick;
+}
