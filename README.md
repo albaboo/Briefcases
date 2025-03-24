@@ -33,3 +33,9 @@
 > 7.1   -     [Documentación](https://github.com/albaboo/portafolio/blob/main/kodular/Documentaci%C3%B3%20projecte%20Kodular_%20Doom.docx)
 
 > 7.2   -     [Archivo Doom en Kodular](https://github.com/albaboo/portafolio/blob/main/kodular/Doom.aia)
+
+8     -     Proyectos de Java
+
+> 8.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
+
+> 8.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
