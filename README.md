@@ -34,8 +34,10 @@
 
 > 7.2   -     [Archivo Doom en Kodular](https://github.com/albaboo/portafolio/blob/main/kodular/Doom.aia)
 
-8     -     Proyectos de Java
+8     -     [Portal web de ODS](https://github.com/albaboo/Briefcases/tree/main/PortalODS)    
 
-> 8.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
+9     -     Proyectos de Java
 
-> 8.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
+> 9.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
+
+> 9.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
