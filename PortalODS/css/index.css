@@ -1,0 +1,91 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "glossary";
+    grid-template-rows: 200px 100%;
+    margin: 0;
+    padding: 0;
+    background: #e0e1dd;
+    font-family: sans-serif;
+    text-align: justify;
+}
+header{
+    grid-area: header;
+    background-color: #1B263B;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: grid;
+    padding: 3%;
+}
+h1 {
+    color: #F1FAEE;
+    text-align: center;
+    place-self: center;
+    animation: inicio 0.8s;
+}
+.menu {
+    grid-area: glossary;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+    height: 100%;
+
+}
+a {
+    animation: inicio 1s;
+    text-decoration: none;
+}
+.btn {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.btn:hover #d1, .btn:hover #d2, .btn:hover #d3, .btn:hover #d4, .btn:hover #d5 {
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.24), 0 0 50px 0 rgba(0,0,0,0.20);
+}
+#d0, #d1, #d2, #d3, #d4, #d5 {
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+    border-radius: 30px;
+    transition: 0.3s;
+    border-bottom: 2px solid #778DA9;
+}
+#d1 {
+    background-image: url("../images/sostenibilitat.png");
+}
+#d2 {
+    background-image: url("../images/asg.png");
+}
+#d3 {
+    background-image: url("../images/ambiental.png");
+}
+#d4 {
+    background-image: url("../images/social.png");
+}
+#d5 {
+    background-image: url("../images/pla_accio.png");
+}
+.page {
+    flex-basis: 10%;
+    color: #415A77;
+    border-bottom: 2px solid #778DA9;
+}
+@keyframes inicio {
+    0% {filter: blur(5px);}
+}
+@media (max-width: 1120px) {
+    .menu {
+        flex-direction: column;
+    }
+    .btn {
+        transform: scale(0.8);
+    }
+}
