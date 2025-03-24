@@ -43,3 +43,5 @@
 > 10.1   -     [Heroes Of Drakthoria](https://gitlab.com/projectesdam/heroesofdrakthoria)
 
 > 10.2   -     [Problema JO-EL](https://gitlab.com/projectesdam/joel)
+
+> > 10.2.1   -     [Plantilla explicación](https://github.com/albaboo/Briefcases/blob/main/ProyectosJava/AlbaDiaz_DOMJudge%20-%20Plantilla.pdf) 
