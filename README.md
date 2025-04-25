@@ -44,6 +44,6 @@
 
 > 10.2   -     [Problema JO-EL](https://github.com/albaboo/Briefcases/tree/main/ProyectosJava/ProblemaJOEL)
 
-> > 10.2.1   -     [Plantilla explicación](https://github.com/albaboo/Briefcases/blob/main/ProyectosJava/AlbaDiaz_DOMJudge%20-%20Plantilla.pdf)
+> > 10.2.1   -     [Plantilla explicación](https://github.com/albaboo/Briefcases/blob/main/ProyectosJava/ProblemaJOEL/AlbaDiaz_DOMJudge%20-%20Plantilla.pdf)
 
 > 10.3   -     [Five Alive](https://github.com/albaboo/Briefcases/tree/main/ProyectosJava/FiveAlive)
