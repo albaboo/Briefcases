@@ -1,0 +1,134 @@
+#container-ruletes {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+#container,#container2{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pieContainer, #pieContainer2 {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+
+}
+.fletxa {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid darkslategray;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+
+#pieContainer .slice-wrapper{
+    width: inherit;
+    height: inherit;
+}
+
+
+.slice-wrapper {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 0%, 100% 65%);
+    transform-origin: center;
+    border-radius: 50%;
+}
+
+.slice2-wrapper {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    transform-origin: center;
+    border-radius: 50%;
+}
+
+
+
+#slice1 {
+    background: fuchsia;
+    transform: rotate(-45deg);
+    z-index: 6;
+}
+
+#slice2 {
+    transform: rotate(15deg);
+    background: cyan;
+    z-index: 5;
+}
+
+#slice3 {
+    transform: rotate(75deg);
+    background: lime;
+    z-index: 4;
+}
+
+#slice4 {
+    transform: rotate(135deg);
+    background:yellow;
+    z-index: 3;
+}
+
+#slice5 {
+    background: red;
+    transform: rotate(195deg);
+    z-index: 2;
+}
+
+#slice6 {
+    background: hotpink;
+    transform: rotate(255deg);
+    z-index: 1;
+}
+
+.gira {
+    animation: girarRuleta 5s ease-out forwards;
+}
+
+#slicea {
+    background: fuchsia;
+    transform: rotate(-45deg);
+    z-index: 4;
+}
+
+#sliceb {
+    transform: rotate(45deg);
+    background: cyan;
+    z-index: 3;
+}
+
+#slicec {
+    transform: rotate(135deg);
+    background: lime;
+    z-index: 2;
+}
+
+#sliced {
+    transform: rotate(225deg);
+    background:yellow;
+    z-index: 1;
+}
+
+nav {
+    height: 15px;
+}

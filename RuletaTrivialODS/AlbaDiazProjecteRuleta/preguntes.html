@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alba Díaz Bazán">
+    <title>Ruleta de Alba</title>
+    <link rel="shortcut icon" href="icono.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/gestion.js" defer></script>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body class="m-0 p-0 vh-100 row d-flex justify-content-center bg-dark-subtle">
+    <nav class="navbar navbar-light bg-secondary-subtle justify-content-start align-content-center p-5 gap-5">
+        <a class="navbar-brand" href="Index.html">Inici</a>
+        <a class="navbar-brand" href="Login.html">Inicia sessió</a>
+        <a class="navbar-brand" href="Register.html">Registre</a>
+    </nav>
+    <div class="p-5 m-5 d-flex row justify-content-center w-100 h-75">
+        <h1 class="text-center mb-4">Preguntes de Sostenibilitat</h1>
+        <div class="d-inline-flex w-50 m-5 gap-5">
+            <select id="tema" class="form-select fs-3 w-100">
+                <option value="0">Tots els temes</option>
+                <option value="1">Tema 1</option>
+                <option value="2">Tema 2</option>
+                <option value="3">Tema 3</option>
+                <option value="4">Tema 4</option>
+                <option value="5">Tema 5</option>
+                <option value="6">Tema 6</option>
+            </select>
+            <button onclick="cercarPreguntes()" class="btn btn-dark w-25">Cercar</button>
+        </div>
+        <div id="caixa" class="h-75">
+            <div id="resultat" class="row">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

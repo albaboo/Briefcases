@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alba Díaz Bazán">
+    <title>Ruleta de Alba</title>
+    <link rel="shortcut icon" href="icono.png">
+    <script src="js/gestion.js" defer></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body class="m-0 p-0 vh-100 row d-flex justify-content-center bg-dark-subtle">
+    <nav class="navbar navbar-light bg-secondary-subtle justify-content-start align-content-center p-5 gap-5">
+        <a class="navbar-brand" href="Index.html">Inici</a>
+        <a class="navbar-brand" href="Login.html">Inicia sessió</a>
+        <a class="navbar-brand" href="preguntes.html">Preguntes</a>
+    </nav>
+    <div class="p-3 m-5 d-flex justify-content-center align-items-center w-100 h-75">
+        <div class="border border-primary px-5 pt-5 m-5 bg-primary-subtle rounded-5 d-flex row gap-5 align-content-center w-50 h-75">
+            <form class="align-content-center gap-5 row" method="GET">
+                <h3>Registre</h3>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label input-group-text">Username</label>
+                    <div class="col-sm-10">
+                        <input type="email" id="user" class="form-control" placeholder="Write here your email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label input-group-text">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" id="pwd" class="form-control" placeholder="Write here your password">
+                    </div>
+                </div>
+            </form>
+            <button onclick="register()" class="btn btn-secondary w-25">Enviar</button>
+            <p id="resultat"></p>
+        </div>
+        <div class="border border-primary p-4 m-5 bg-primary-subtle rounded-5 d-flex row w-25 h-auto">
+            <h3>Tens compte?</h3>
+            <button class="btn btn-dark w-100 h-auto mx-auto fs-3" onclick="location.href='Login.html'">Inicia sessió ara!</button>
+        </div>
+    </div>
+</body>
+</html>

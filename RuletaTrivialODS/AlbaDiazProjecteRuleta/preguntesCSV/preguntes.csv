@@ -1,0 +1,60 @@
+idpreguntes,descripcio,tema,resposta1,resposta2,resposta3,resposta4,solucio
+1,"Quin és l'ODS1?",1,"Fam zero","Educació de qualitat"," Salut i benestar","Fi de la pobresa",4
+2,"Quin és l'ODS2?",1,"Fam zero","Educació de qualitat"," Salut i benestar","Fi de la pobresa",1
+3,"Quin és l'ODS3?",1,"Fam zero","Educació de qualitat"," Salut i benestar","Fi de la pobresa",3
+4,"Quin és l'ODS4?",1,"Fam zero","Educació de qualitat"," Salut i benestar","Fi de la pobresa",2
+5,"Quin és l'ODS5?",1,"Energia assequible i no contaminant","Aigua neta i sanejament","Treball decent i creixement econòmic","Igualtat de gènere",4
+6,"Quin és l'ODS6?",1,"Energia assequible i no contaminant","Aigua neta i sanejament","Treball decent i creixement econòmic","Igualtat de gènere",2
+7,"Quin és l'ODS7?",1,"Energia assequible i no contaminant","Aigua neta i sanejament","Treball decent i creixement econòmic","Igualtat de gènere",1
+8,"Quin és l'ODS8?",1,"Energia assequible i no contaminant","Aigua neta i sanejament","Treball decent i creixement econòmic","Igualtat de gènere",3
+9,"Quin és l'ODS9?",1,"Reducció de les desigualtats","Ciutats i comunitats sostenibles","Indústria, innovació i infraestructura","Acció pel clima",3
+10,"Quin és l'ODS12?",1,"Consum i producció responsables","Vida d'ecosistemes terrestres","Aliances per assolir els objectius","Vida submarina",1
+11,"Quin és un aspecte clau de les aliances i sinèrgies públic-privat?",2,"Foment de la tecnologia","Foment de la Innovació","Responsabilitat econòmica corporativa","Programes de formació",2
+12,"Quina és una caràcterística de l'economica circular",2,"Compromís amb la Sostenibilitat","Inclusió Social i Igualtat d'Oportunitats","Reciclatge i Valorització de Residus","Implementació de Projectes Conjunts",3
+13,"Quin és un compromís social?",2,"Col·laboració en la presa de decisions","Col·laboració amb la Comunitat","Estratègies de Procés Eficients","Reciclatge i Valorització de Residus",2
+14,"Quin és un repte social?",2,"Desplaçament de Poblacions","Contaminació Plàstica"," Desafiaments Urbans","Escassetat d'Aigua",1
+15,"Quin és un repte ambiental?",2,"Desigualtats Socials","Pobresa i Inclusió Social","Escassetat d'Aigua","Desplaçament de Poblacions",3
+16,"Quin és un impacte en el sector productiu/industrial?",2,"Oci en la qualitat de vida de les persones","Accés equitatiu a la sanitat","La ocupació i les condicions laborals","Garantir l'equitat i l'accés als serveis",3
+17,"Quin no és un repte en el canvi en la crisi climàtica?",2,"Enfortir la resilència","Millorar l'educació","Promoure l'economia baixa en carboni","Pèrdua de biodiversitat",4
+18,"Quin és un ODS important en el sector agrícola?",3,1,2,3,4,2
+19,"Quin és un ODS important en el sector manufacturer?",3,8,9,10,11,2
+20,"Quin és un ODS important en el sector energètic?",3,8,9,10,11,2
+21,"Quin és un ODS important en el sector turístic?",3,8,9,10,11,1
+22,"Quin és un ODS important en el sector tecnològic?",3,1,2,3,4,4
+23,"Quin és un ODS important en el sector cura i atenció a les persones?",3,8,9,10,11,3
+24,"Quin no és un risc associat als ODS",3,"Inacció o progrés insuficient","Desigualtats exacerbades","Interessos contraposats","Accés a finançament sostenible",4
+25,"Quina no és una oportunitat associada als ODS",3,"Inacció o progrés insuficient","Col·laboració i innovació","Millora de la reputació i la marca","Accés a finançament sostenible",1
+26,"Quina no és una mesura orientada a enfortir els aspectes de sostenibilitat i contribució de les actituds personals en la cosecució dels ODS?",3,"Educació i Conscienciació","Canvis en el Consum","Estalvi d'Energia i Aigua","Accés a finançament sostenible",4
+27,"Quina és una activitat/s sostenible ambiental?",5,"Diversitat i inclusió","Energia renovables","Responsabilitat Financera","Innovació i millora continua",2
+28,"Quina és una activitat/s sostenible social?",5,"Diversitat i inclusió","Energia renovables","Responsabilitat Financera","Innovació i millora continua",1
+29,"Quina és una activitat/s sostenible econòmica?",5,"Diversitat i inclusió","Energia renovables","Responsabilitat Financera","Reducció d'emissions",3
+30,"Quin són els objectius d'una economica circular?",5,"Justicia Social","Energia Renovable","Economia de serveis","Sostenibilitat ambientat",3
+31,"Quin són els objectius d'una economica verda?",5,"Justicia Social","Cicle tancat","Economia de serveis","Disseny per a la longevitat",1
+32,"Quin no és un pas d'un pla d'acció basat en economia verda i circular?",5,"Anàlisi de la situació actual","Definició d'objectius","Implementació de canvis","Pluja d'idees",4
+33,"Quina no és una clau en el model de negoci d'economia verda i circular?",4,"Compromís amb la Reducció d'Impacte Ambiental","Auditories i certificacions","Implicació dels Clients","Innovació Contínua",2
+34,"Quin no és un aspecte clau per a les empreses indústrials",4,"Simbiosi Industrial","Producte com a Servei","Energia Renovable","Producció Circular",2
+35,"Quin no és un aspecte clau per a les empreses de serveis?",4,"Serveis Basats en la Eficiència de Recursos","Producte com a Servei","Energia Renovable","Reciclatge i Reutilització en el Lloc de Treball",3
+36,"Quin és un model de negoci destacat?",4,"Manufacture-Service System, MSS","Agricultura i Alimentació intensiva","Construcció i Edificació amb vidre","Cradle to Cradle",4
+37,"Què signifiquen les sigles ASG?",5,"Ambiental, Social i de Governança","Ambiental, Social i de Govern","Ambiental, Societat i de Governança","Ambiental, Social i de Guany",1
+38,"Què significa KPI?",4,"Indicadors de producció clau","Indicador de serveis clau","Indicadors claus de rendiment","Indicadors de producció de bens clau",3
+39,"Quin és un avantatge d'un pla de sostenibilitat?",6,"Millorar impacte ambiental","Innovació en regulacions i noramtives","Augmenta la productivitat i redueix costos","Millora d'inversions",3
+40,"Quin no és un component clau en un pla de sostenibilitat?",6,"Anàlisi de la situació actual","Indicadors de rendiment","Avaluació i millora continua","Estratègia i accions",1
+41,"Quins és un pas d'un informe de sostenibilitat?",6,"Anàlisi de la situació actual","Identificació dels grups d'interès","Pluja d'idees","Estratègia i accions",2
+42,"Quin és l'ODS10?",1,"Reducció de les desigualtats","Ciutats i comunitats sostenibles","Indústria, innovació i infraestructura","Acció pel clima",1
+43,"Quin és l'ODS11?",1,"Reducció de les desigualtats","Ciutats i comunitats sostenibles","Indústria, innovació i infraestructura","Acció pel clima",2
+44,"Quin és l'ODS13?",1,"Reducció de les desigualtats","Ciutats i comunitats sostenibles","Indústria, innovació i infraestructura","Acció pel clima",4
+45,"Quin és l'ODS14?",1,"Consum i producció responsables","Vida d'ecosistemes terrestres","Aliances per assolir els objectius","Vida submarina",4
+46,"Quin és l'ODS15?",1,"Consum i producció responsables","Vida d'ecosistemes terrestres","Aliances per assolir els objectius","Vida submarina",2
+47,"Quin és l'ODS17?",1,"Consum i producció responsables","Vida d'ecosistemes terrestres","Aliances per assolir els objectius","Vida submarina",3
+54,"Quin no es uns dels principals reptes de la crisi climatica?",2,"Reducció de les emissions de gasos amb efecte d'hivernacle","Promoure una economia baixa en carboni","Augmentar l'impacte del canvi climàtic","Millorar l'educació, la sensibilització i la capacitación",3
+55,"Quin no es un avantatge que te un pla de sostenibilitat?",6,"Mitiga l'impacte ambiental","Disminueix la productivitat i redueix costos","Compleix regulacions i normatives","Millora la reputació i atracció d'inversors",2
+56,"Quin dels següents és un impacte ambiental del sector de serveis?",2,"Augment de la biodiversitat a les zones urbanes","Emissions de gasos d'efecte hivernacle a través de la mobilitat","Reducció de la desforestació","Increment de la disponibilitat d'aigua dolça",2
+57,"Quina de les següents estratègies forma part de l'economia circular?",2,"Ús massiu de materials no reciclables","Disseny de productes d'un sol ús","Reciclatge i valorització de residus","Dependència exclusiva de combustibles fòssils",3
+58,"Quin ODS promou l'ús d'energies netes i infraestructures sostenibles?",3,2,7,12,15,2
+59,"Quina acció ajuda a consumir de manera responsable?",3,"Reduir els residus i reciclar adequadament","Augmentar el consum de plàstics d'un sol ús","Utilitzar vehicles contaminants de manera habitual","Ignorar les normatives locals de gestió de residus",1
+60,"Quin és un principi clau en l'ecodisseny?",4,"Maximitzar l'ús de materials no reciclables","Minimitzar la vida útil del producte","Incrementar el consum d'energia durant la fabricació","Facilitar el desmuntatge per a reparació o reciclatge",4
+61,"Quina estratègia ajuda a reduir l’impacte ambiental en la producció de béns?",4,"Utilitzar materials reciclats o biodegradables","Evitar la certificació ASG","Augmentar la generació de residus","Disminuir l’eficiència energètica",1
+62,"Quin element és essencial en un hospital verd segons els criteris de sostenibilitat?",5," Sistemes d'energia renovable","Màxim ús de materials no reutilitzables","Eliminació de programes de reciclatge","Ús exclusiu de productes químics agressius",1
+63,"Quina acció és pròpia de l'economia circular en el disseny de productes?",5,"Programar l'obsolescència dels components","Facilitar el desmuntatge per a reparació o reciclatge","Utilitzar materials no reciclables","Augmentar l'ús d'embalatges d'un sol ús",2
+64,"Quin no és un dels principals beneficis d'un anàlisi de materialitat ASG?",6,"Mitigació de riscos","Millora de la comunicació amb els grups d’interès","Focalització en l’impacte positiu","Reduir la transparència",4
+65,"Quina és una acció de bona governança en sostenibilitat?",6,"Contractar empleats sense formació en sostenibilitat","Ignorar normatives ambientals per estalviar costos","Crear un comitè de sostenibilitat al consell","No publicar informes de sostenibilitat per evitar crítiques",3

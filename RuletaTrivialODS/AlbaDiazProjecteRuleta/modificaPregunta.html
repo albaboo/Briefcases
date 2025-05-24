@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alba Díaz Bazán">
+  <title>Ruleta de Alba</title>
+  <link rel="shortcut icon" href="icono.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/gestion.js" defer></script>
+  <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body class="m-0 p-0 vh-100 row d-flex justify-content-around bg-dark-subtle">
+<nav class="navbar navbar-light bg-secondary-subtle justify-content-start align-content-center p-5 gap-5">
+    <a type="button" class="navbar-brand" onclick="tancarSessio()">Tancar sessio</a>
+    <a class="navbar-brand" href="creaPartida.html">Crear partida</a>
+    <a class="navbar-brand" href="creaPregunta.html">Crear pregunta</a>
+    <a class="navbar-brand" href="Ruleta22.html">Jugar</a>
+  </nav>
+  <div class="border border-primary p-5 m-5 gap-3 bg-primary-subtle rounded-5 d-flex row justify-content-center h-75 w-50">
+    <form id="formulario" class="align-content-center gap-4 row" method="GET">
+      <h3>Modificar pregunta</h3>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">ID</label>
+        <div class="col-sm-10">
+          <input type="number" id="id" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Enunciat</label>
+        <div class="col-sm-10">
+          <input type="text" id="desc" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Tema</label>
+        <div class="col-sm-10">
+          <input type="number" id="tema" class="form-control" min="1" max="6">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Resposta 1</label>
+        <div class="col-sm-10">
+          <input type="text" id="r1" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Resposta 2</label>
+        <div class="col-sm-10">
+          <input type="text" id="r2" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Resposta 3</label>
+        <div class="col-sm-10">
+          <input type="text" id="r3" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Resposta 4</label>
+        <div class="col-sm-10">
+          <input type="text" id="r4" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label input-group-text">Solucio</label>
+        <div class="col-sm-10">
+          <input type="number" id="solu" class="form-control" min="1" max="4">
+        </div>
+      </div>
+    </form>
+    <button onclick="modificaPregunta()" class="btn btn-secondary w-50">Enviar</button>
+    <p id="resultat"></p>
+  </div>
+</body>
+</html>

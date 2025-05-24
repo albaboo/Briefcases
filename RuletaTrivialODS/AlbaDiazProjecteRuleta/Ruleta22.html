@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alba Díaz Bazán">
+    <title>Ruleta de Alba</title>
+    <link rel="shortcut icon" href="icono.png">
+    <link rel="stylesheet" href="css/Ruleta22.css">
+    <script src="js/Ruleta22.js" defer></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body class="m-0 p-0 vh-100 row bg-dark-subtle">
+<nav class="navbar navbar-light bg-secondary-subtle justify-content-start align-content-center m-0 p-5 gap-5">
+    <a type="button" class="navbar-brand" onclick="tancarSessio()">Tancar sessio</a>
+    <a class="navbar-brand" href="creaPartida.html">Crear partida</a>
+    <a class="navbar-brand" href="creaPregunta.html">Crear pregunta</a>
+    <a class="navbar-brand" href="modificaPregunta.html">Modificar pregunta</a>
+</nav>
+<div class="d-flex row h-75 m-0 p-0">
+    <div class="d-flex row justify-content-center align-items-center w-100 gap-5">
+        <div class="d-inline-flex w-50 gap-5">
+            <form class="d-flex row w-100 justify-content-center align-items-center" method="get">
+                <input id="partida" type="number" class="form-control w-100">
+            </form>
+            <button id="validar" class="btn btn-dark w-25 mx-auto fs-3" onclick="validar()">Validar</button>
+            <button id="girar" class="btn btn-dark w-25 mx-auto fs-3 d-none" onclick="clica()">Girar</button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center w-100">
+        <div class="d-flex align-items-center gap-5 flex-wrap flex-md-nowrap w-auto">
+            <p id="pregunta" class="fs-4 mb-0 text-wrap w-auto"></p>
+            <select id="resposta" class="form-select fs-3 w-auto d-none">
+            </select>
+            <button id="contestar" onclick="comprovarResposta()" class="btn btn-dark fs-3 px-4 d-none">Contestar</button>
+            <p id="resultat" class="fs-4 mb-0 text-nowrap w-auto"></p>
+        </div>
+    </div>
+    <div class="h-75">
+        <div id="container-ruletes" class="m-5">
+            <div id="container">
+                <div class="fletxa"></div>
+                <div id="pieContainer">
+                    <div id="slice1" class="slice-wrapper">
+                    </div>
+                    <div id="slice2" class="slice-wrapper">
+                    </div>
+                    <div id="slice3" class="slice-wrapper">
+                    </div>
+                    <div id="slice4" class="slice-wrapper">
+                    </div>
+                    <div id="slice5" class="slice-wrapper">
+                    </div>
+                    <div id="slice6" class="slice-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="container2">
+                <div class="fletxa"></div>
+                <div id="pieContainer2">
+                    <div id="slicea" class="slice2-wrapper">
+                    </div>
+                    <div id="sliceb" class="slice2-wrapper">
+                    </div>
+                    <div id="slicec" class="slice2-wrapper">
+                    </div>
+                    <div id="sliced" class="slice2-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center text-center gap-5">
+            <div class="border border-danger p-3 bg-danger-subtle rounded-5 d-flex justify-content-center align-items-center row w-auto">
+                <h3>Grup 1</h3>
+                <div class="d-flex justify-content-center align-items-center ">
+                    <p class="text-start">Fuchsia: Tema 1 <br/>
+                        Cyan: Tema 2 <br/>
+                        Lime: Tema 3 <br/>
+                        Groc: Tema 4 <br/>
+                        Vermell: Tema 5<br/>
+                        Hotpink: Tema 6<br/></p>
+                </div>
+            </div>
+            <div class="border border-primary p-3 bg-primary-subtle rounded-5 d-flex justify-content-center align-items-center row w-auto">
+                <h3>Grup 2</h3>
+                <div class="d-flex justify-content-center align-items-center ">
+                    <p class="text-start">Fuchsia: Pregunta Normal <br/>
+                        Cyan: Pregunta Formatge <br/>
+                        Lime: Es resten 50 punts <br/>
+                        Groc: Es sumen 50 punts <br/></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
