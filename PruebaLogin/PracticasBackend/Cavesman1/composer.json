@@ -1,0 +1,20 @@
+{
+    "name": "programacion3/cavesman1",
+    "type": "project",
+    "require": {
+        "soanix/cavesman": "^0.5.2",
+        "ext-pdo": "*",
+        "doctrine/orm": "^3.4",
+        "symfony/cache": "^7.3",
+        "firebase/php-jwt": "^6.11"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
