@@ -1,0 +1,4 @@
+{
+    "algorithm": "HS256",
+    "key": "{key}"
+}

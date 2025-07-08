@@ -1,0 +1,11 @@
+{
+    "debug": true,
+    "log": {
+        "debug": true,
+        "enabled": true
+    },
+    "session": {
+        "enabled": true
+    },
+    "timezone": "Europe\/Madrid"
+}

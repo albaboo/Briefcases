@@ -1,0 +1,18 @@
+{
+    "cli": {
+        "dbname": "pruebalogin",
+        "user": "root",
+        "password": "1234",
+        "host": "localhost",
+        "driver": "pdo_mysql",
+        "dev_mode": true
+    },
+    "local": {
+        "dbname": "pruebalogin",
+        "user": "root",
+        "password": "1234",
+        "host": "localhost",
+        "driver": "pdo_mysql",
+        "dev_mode": true
+    }
+}
