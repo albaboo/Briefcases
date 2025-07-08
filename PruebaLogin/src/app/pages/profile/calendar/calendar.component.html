@@ -1,0 +1,107 @@
+<div class="d-flex flex-column bg-secondary-subtle fondo min-vh-100">
+    <div class="bg-white d-flex justify-content-between border rounded-bottom-3 px-4 py-3">
+        <div class="d-flex gap-3 align-items-center">
+            <i class="fa-solid fa-user fa-2x"></i>
+            <h4 class="m-0"> <strong>{{user.username}}</strong>, {{user.city}}</h4>
+        </div>
+        <div class="align-content-center position-relative">
+            <i class="fa-solid fa-bell px-5"
+               (mouseenter)="toggleNotification()" (mouseleave)="toggleNotification()"
+               style="cursor: pointer;"></i>
+            <div [hidden]="!showNotification"
+                 class="position-absolute bg-white border rounded p-3 mt-1"
+                 style="left: -180px;">
+                <p class="m-0 ">Tienes nuevas notificaciones</p>
+            </div>
+            <button type="submit"
+                    class="btn-close btn-close"
+                    [routerLink]="['/login']">
+            </button>
+        </div>
+    </div>
+    <div class="d-flex container-fluid">
+        <nav class="bg-white border rounded-3 m-3 h-auto w-auto align-self-start">
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-top w-auto" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-grip w-25"></i>
+                    <a class="nav-link w-50">Dashboard</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/people" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-user-group w-25"></i>
+                    <a class="nav-link w-50">People</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-clipboard-list w-25"></i>
+                    <a class="nav-link w-50">Projects</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-calendar-day w-25"></i>
+                    <a class="nav-link w-50">Calendar</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/training" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-chalkboard w-25"></i>
+                    <a class="nav-link w-50">Training</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/timesheet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-hourglass w-25"></i>
+                    <a class="nav-link w-50">Timesheet</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/reports" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-comments w-25"></i>
+                    <a class="nav-link w-50">Reports</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/administration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-city w-25"></i>
+                    <a class="nav-link w-50">Administration</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-bottom" routerLink="/help" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-question w-25"></i>
+                    <a class="nav-link w-50">Help</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-flex flex-grow-1 w-100 bg-white border rounded-3 m-3 p-3 gap-3 h-auto align-self-start">
+            <div class="container mt-4">
+                <div class="mb-4 form-floating">
+                    <input type="month" class="form-control" name="search" autocomplete="month" (keydown.enter)="searchMonth($event)"/>
+                    <label class="d-flex justify-content-between">Search a date</label>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <button class="btn btn-outline-secondary" (click)="prevMonth()">←</button>
+                    <h3>{{ currentDate.toLocaleString('en', { month: 'long' }) }} {{ currentYear }}</h3>
+                    <button class="btn btn-outline-secondary" (click)="nextMonth()">→</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-light">
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @for (week of weeks; track $index) {
+                                <tr>
+                                    @for (day of week; track $index) {
+                                        <td>
+                                            @if (day !== null) {
+                                                <div class="p-2">{{ day }}</div>
+                                            } @else {
+                                                <div class="p-2 text-muted">&nbsp;</div>
+                                            }
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

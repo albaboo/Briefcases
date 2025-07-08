@@ -1,0 +1,32 @@
+.fondo {
+    min-width: 800px;
+}
+.nav-item:hover {
+    background-color: mediumslateblue;
+    color: white;
+}
+.rounded-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.rounded-bottom {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.active {
+    background-color: rebeccapurple;
+    color: white;
+}
+.active:hover {
+    background-color: mediumpurple;
+    color: white;
+}
+.opciones{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+ul li {
+    cursor: pointer;
+}

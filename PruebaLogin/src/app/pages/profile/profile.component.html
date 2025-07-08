@@ -1,0 +1,40 @@
+<div class="d-flex flex-column bg-warning-subtle min-vh-100">
+    <nav class="justify-content-center my-3 nav">
+        <a class="navbar-brand h1 fs-1" [routerLink]="['/login']">Smile</a>
+    </nav>
+    <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center p-5"
+         style="background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('/bgProfile.jpg') no-repeat center / cover">
+        <div class="bg-dark bg-opacity-75 rounded p-4 d-flex flex-column w-50" id="container">
+            <button type="submit"
+                    class="btn-close btn-close-white me-5"
+                    [routerLink]="['/login']"></button>
+            <h2 class="display-6 text-center text-light">Profile Form</h2>
+            <div class="mt-3 form-floating">
+                <input type="text" class="form-control" id="user" name="user" placeholder="User" autocomplete="username"  [(ngModel)]="user.username"/>
+                <label for="user">Name</label>
+            </div>
+            <div class="mt-3 form-floating">
+                <input type="date" class="form-control" name="birthday" autocomplete="bday"
+                       [(ngModel)]="user.birthday"/>
+                <label class="d-flex justify-content-between">Birthday</label>
+            </div>
+            <div class="mt-3 form-floating">
+                <input type="text" class="form-control" name="city" placeholder="City" autocomplete="address-level2"
+                       [(ngModel)]="user.city"/>
+                <label class="d-flex justify-content-between">City</label>
+            </div>
+            <div class="mt-4">
+                <button type="submit"
+                        class="btn btn-primary rounded w-100 mt-2"
+                        [routerLink]="['/people']">
+                    See other people
+                </button>
+                <button type="submit"
+                        class="btn btn-info text-light w-100 mt-2"
+                        (click)="update()" [disabled]="!user.username || !user.birthday || !user.city">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

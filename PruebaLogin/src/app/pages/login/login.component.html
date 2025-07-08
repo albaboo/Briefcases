@@ -1,0 +1,33 @@
+<div class="d-flex flex-column bg-danger-subtle min-vh-100">
+    <h1 class="text-center my-3">Smile</h1>
+    <div class="flex-grow-1 d-flex justify-content-center align-items-center p-5"
+         style="background: linear-gradient(rgba(248, 215, 218, .5), rgba(248, 215, 218, .5)), url('/bgLogin.jpg') no-repeat center / cover">
+        <form
+            class="bg-light bg-opacity-75 text-dark rounded p-4 d-flex flex-column justify-content-around gap-3 w-25">
+            <div class="text-center">
+                <i class="fa-solid fa-face-grin-beam fa-5x"></i>
+            </div>
+            <div class="text-center">
+                <h2>Login</h2>
+            </div>
+            <div class="text-center">
+                <p>Hello {{ user.username }}!</p>
+            </div>
+            <div class="mt-3 form-floating">
+                <input type="text" class="form-control border-dark-subtle" id="user" name="user" placeholder="User" autocomplete="username"  [(ngModel)]="user.username"/>
+                <label for="user">Name</label>
+            </div>
+            <div class="mt-3 form-floating">
+                <input type="password" class="form-control border-dark-subtle" id="password" name="password" placeholder="Password" autocomplete="current-password"  [(ngModel)]="user.password"/>
+                <label for="password">Password</label>
+            </div>
+            <nav class="d-flex justify-content-between nav fs-6">
+                Don't you have account?
+                <a class="navbar-brand text-primary" [routerLink]="['/register']">Register now here</a>
+            </nav>
+            <button type="submit" class="btn btn-info text-light rounded" (click)="login()"
+                    [disabled]="!user.password || !user.username">Submit
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="d-flex flex-column bg-warning-subtle fondo w-100">
+    <nav class="justify-content-center my-3 nav gap-5">
+        <a class="navbar-brand h1 fs-1" [routerLink]="['/profile']">Smile</a>
+    </nav>
+    <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center gap-5 p-5 w-100"
+         style="background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('/bgProfile.jpg') no-repeat center / cover">
+        <div class="bg-dark bg-opacity-75 fs-4 rounded p-4 d-flex flex-column gap-4 w-50 caja">
+            <button type="submit" class="btn btn-info text-secondary-emphasis rounded" [routerLink]="['/profile']">Return to your profile</button>
+        </div>
+        <div class="bg-dark bg-opacity-75 text-white rounded p-4 d-flex flex-column gap-4 caja2">
+            <h2 class="display-6 text-center">Other people here that you can smile</h2>
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Birthday</th>
+                        <th scope="col">City</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    @for (other of users; track other.id) {
+                        @if (other.username != user.username) {
+                            <tr>
+                                <th scope="row" class="p-4 bg-light bg-opacity-75">{{other.id}}</th>
+                                <td class="bg-light bg-opacity-75">{{ other.username }}</td>
+                                <td class="bg-light bg-opacity-75">{{ other.birthday }}</td>
+                                <td class="bg-light bg-opacity-75">{{ other.city }}</td>
+                                <td class="p-4 bg-light bg-opacity-75">
+                                    @if (user.admin) {
+                                        <div class="opciones">
+                                            <button type="submit"
+                                                    class="btn btn-info d-flex justify-content-center align-items-center h-auto w-auto"
+                                                    (click)="update(other.id)">
+                                                <i class="fa-solid fa-pen text-white"></i>
+                                            </button>
+                                            <button type="submit"
+                                                    class="btn btn-danger d-flex justify-content-center align-items-center h-auto w-auto"
+                                                    (click)="delete(other.id)">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button>
+                                        </div>
+                                    }
+                                </td>
+                            </tr>
+                        } @else {
+                            <tr class="table-active">
+                                <th scope="row" class="p-4 bg-light bg-opacity-75">{{other.id}}</th>
+                                <td class="bg-light bg-opacity-75">{{ other.username }}</td>
+                                <td class="bg-light bg-opacity-75">{{ other.birthday }}</td>
+                                <td class="bg-light bg-opacity-75">{{ other.city }}</td>
+                                <td class="p-4 bg-light bg-opacity-75">
+                                    <div class="opciones">
+                                        <button type="submit"
+                                                class="btn btn-info d-flex justify-content-center align-items-center h-auto w-auto"
+                                                (click)="update(other.id)">
+                                            <i class="fa-solid fa-pen text-white"></i>
+                                        </button>
+                                        <button type="submit"
+                                                class="btn btn-danger d-flex justify-content-center align-items-center h-auto w-auto"
+                                                (click)="delete(other.id)">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="bg-dark bg-opacity-75 fs-4 rounded p-4 d-flex flex-column gap-4 w-50 caja">
+            <button type="submit" class="btn btn-info text-secondary-emphasis rounded" [routerLink]="['/profile']">Return to your profile</button>
+        </div>
+    </div>
+</div>

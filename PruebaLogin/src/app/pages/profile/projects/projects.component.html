@@ -1,0 +1,165 @@
+<div class="d-flex flex-column bg-secondary-subtle fondo min-vh-100">
+    <div class="bg-white d-flex justify-content-between border rounded-bottom-3 px-4 py-3">
+        <div class="d-flex gap-3 align-items-center">
+            <i class="fa-solid fa-user fa-2x"></i>
+            <h4 class="m-0"> <strong>{{user.username}}</strong>, {{user.city}}</h4>
+        </div>
+        <div class="align-content-center position-relative">
+            <i class="fa-solid fa-bell px-5"
+               (mouseenter)="toggleNotification()" (mouseleave)="toggleNotification()"
+               style="cursor: pointer;"></i>
+            <div [hidden]="!showNotification"
+                 class="position-absolute bg-white border rounded p-3 mt-1"
+                 style="left: -180px;">
+                <p class="m-0 ">Tienes nuevas notificaciones</p>
+            </div>
+            <button type="submit"
+                    class="btn-close btn-close"
+                    [routerLink]="['/login']">
+            </button>
+        </div>
+    </div>
+    <div class="d-flex container-fluid">
+        <nav class="bg-white border rounded-3 m-3 h-auto w-auto align-self-start">
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-top w-auto" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-grip w-25"></i>
+                    <a class="nav-link w-50">Dashboard</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/people" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-user-group w-25"></i>
+                    <a class="nav-link w-50">People</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-clipboard-list w-25"></i>
+                    <a class="nav-link w-50">Projects</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-calendar-day w-25"></i>
+                    <a class="nav-link w-50">Calendar</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/training" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-chalkboard w-25"></i>
+                    <a class="nav-link w-50">Training</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/timesheet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-hourglass w-25"></i>
+                    <a class="nav-link w-50">Timesheet</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/reports" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-comments w-25"></i>
+                    <a class="nav-link w-50">Reports</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/administration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-city w-25"></i>
+                    <a class="nav-link w-50">Administration</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-bottom" routerLink="/help" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-question w-25"></i>
+                    <a class="nav-link w-50">Help</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-flex flex-grow-1 w-100 bg-white border rounded-3 m-3 p-3 gap-3 h-auto align-self-start">
+            @if ( !project ) {
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">#</th>
+                            <th scope="col" class="ps-4 border-end">Users</th>
+                            <th scope="col" class="ps-4 border-end">Project</th>
+                            <th scope="col" class="ps-4 border-end">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        @for (project of projects; track project.id) {
+                            <tr (click)="seeProject(project.id)" style="cursor: pointer;">
+                                <th scope="row" class="p-4 border-end border-dark-subtle">{{project.id}}</th>
+                                <td class="border-end border-dark-subtle">
+                                    <div class="d-flex flex-wrap gap-2">
+                                        @for (user of project.users; track user) {
+                                            <td class="py-1 px-3 rounded bg-dark-subtle align-content-center text-center">{{ user }}</td>
+                                        }
+                                    </div>
+                                </td>
+                                <td class="border-end border-dark-subtle">
+                                    <table class="table table-sm w-100 h-100 m-0">
+                                        <tbody>
+                                        <th class="p-4">{{ project.short_name }}</th>
+                                        <td class="p-4">({{ project.project_name }})</td>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="p-4 border-end border-dark-subtle">{{ project.description }}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            } @else {
+                <button class="btn btn-outline-secondary" (click)="seeProjects()">←</button>
+                <table class="table table-hover align-middle">
+                    <tbody>
+                    <tr>
+                        <th scope="col" class="ps-4 border-end">Project</th>
+                        <td>
+                            <table class="table table-sm m-0 w-25">
+                                <th class="px-2">{{ project.project_name }}</th>
+                                <td class="px-2">({{ project.short_name }})</td>
+                            </table>
+                        </td>
+                    </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Users</th>
+                            <td>
+                                <div class="d-flex flex-wrap gap-2">
+                                    @for (user of project.users; track user) {
+                                        <td class="py-1 px-3 rounded bg-dark-subtle align-content-center text-center">{{ user }}</td>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Description</th>
+                            <td class="ps-3">{{ project.description }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Budget type</th>
+                            <td class="ps-3">{{ project.budget_type }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Status</th>
+                            <td>
+                                <div class="d-flex flex-wrap gap-2">
+                                    @for (sts of project.status; track sts) {
+                                        <td class="py-1 px-2 rounded bg-primary-subtle align-content-center text-center">{{ sts }}</td>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Practice</th>
+                            <td class="ps-3">{{ project.practice }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Start date</th>
+                            <td class="ps-3">{{ project.start_date }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Finish date</th>
+                            <td class="ps-3">{{ project.end_date }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Billing entity</th>
+                            <td class="ps-3">{{ project.billing_entity }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="ps-4 border-end">Industry</th>
+                            <td class="ps-3">{{ project.industry }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+
+        </div>
+    </div>
+</div>

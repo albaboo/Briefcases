@@ -1,0 +1,27 @@
+.fondo {
+    min-width: 900px;
+}
+.nav-item:hover {
+    background-color: mediumslateblue;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+.rounded-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.rounded-bottom {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.active {
+    background-color: rebeccapurple;
+    color: white;
+}
+.active:hover {
+    background-color: mediumpurple;
+    color: white;
+}
+ul li {
+    cursor: pointer;
+}

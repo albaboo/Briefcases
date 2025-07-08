@@ -1,0 +1,201 @@
+<div class="d-flex flex-column bg-secondary-subtle fondo min-vh-100">
+    <div class="bg-white d-flex justify-content-between border rounded-bottom-3 px-4 py-3">
+        <div class="d-flex gap-3 align-items-center">
+            <i class="fa-solid fa-user fa-2x"></i>
+            <h4 class="m-0"> <strong>{{user.username}}</strong>, {{user.city}}</h4>
+        </div>
+        <div class="align-content-center position-relative">
+            <i class="fa-solid fa-bell px-5"
+               (mouseenter)="toggleNotification()" (mouseleave)="toggleNotification()"
+               style="cursor: pointer;"></i>
+            <div [hidden]="!showNotification"
+                 class="position-absolute bg-white border rounded p-3 mt-1"
+                 style="left: -180px;">
+                <p class="m-0 ">You have new notifications</p>
+            </div>
+            <button type="submit"
+                    class="btn-close btn-close"
+                    [routerLink]="['/login']">
+            </button>
+        </div>
+    </div>
+    <div class="d-flex container-fluid">
+        <nav class="bg-white border rounded-3 m-3 h-auto w-auto align-self-start">
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-top w-auto" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-grip w-25"></i>
+                    <a class="nav-link w-50">Dashboard</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/people" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-user-group w-25"></i>
+                    <a class="nav-link w-50">People</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-clipboard-list w-25"></i>
+                    <a class="nav-link w-50">Projects</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-calendar-day w-25"></i>
+                    <a class="nav-link w-50">Calendar</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/training" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-chalkboard w-25"></i>
+                    <a class="nav-link w-50">Training</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/timesheet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-hourglass w-25"></i>
+                    <a class="nav-link w-50">Timesheet</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/reports" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-comments w-25"></i>
+                    <a class="nav-link w-50">Reports</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1" routerLink="/administration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-city w-25"></i>
+                    <a class="nav-link w-50">Administration</a>
+                </li>
+                <li class="nav-item d-flex align-items-center px-5 py-1 rounded-bottom" routerLink="/help" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <i class="fa-solid fa-question w-25"></i>
+                    <a class="nav-link w-50">Help</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-flex flex-grow-1 w-100 bg-white border rounded-3 m-3 p-3 gap-3 h-auto align-self-start">
+            <form class="row pb-5 g-3">
+                <h5>Form</h5>
+                <div class="col-md-6">
+                    <label for="project_name" class="form-label">Project name</label>
+                    <input type="text" placeholder="Search..." class="form-control bg-secondary-subtle" id="project_name" name="project_name" [(ngModel)]="project.project_name">
+                </div>
+                <div class="col-md-6">
+                    <label for="budget_type" class="form-label">Budget type</label>
+                    <select id="budget_type" name="budget_type" class="form-select bg-secondary-subtle" [(ngModel)]="project.budget_type">
+                        <option selected>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-between">
+                    <div>
+                        <label for="short_name" class="form-label">Short name</label>
+                        <input type="text" placeholder="Search..." class="form-control bg-secondary-subtle" id="short_name" name="short_name" [(ngModel)]="project.short_name">
+                    </div>
+                    <div>
+                        <label for="description" class="form-label">Project description</label>
+                        <input type="text" class="form-control bg-secondary-subtle" id="description" name="description" placeholder="Search..." [(ngModel)]="project.description">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="status" class="form-label">Status</label>
+                    <select id="status" name="status" class="form-select bg-secondary-subtle" style="height: calc(2 * 4.5rem - 0.5rem);" multiple [(ngModel)]="project.status">
+                        <option>In progress</option>
+                        <option>Edit</option>
+                        <option>Publish</option>
+                        <option>Be happy</option>
+                        <option>Dont worry</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="practice" class="form-label">Practice</label>
+                    <select id="practice" name="practice" class="form-select bg-secondary-subtle" [(ngModel)]="project.practice">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="industry" class="form-label">Industry</label>
+                    <select id="industry" name="industry" class="form-select bg-secondary-subtle" [(ngModel)]="project.industry">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 row">
+                    <div class="col-md-6 align-content-end">
+                        <label for="start_date" class="form-label">Start date from:</label>
+                        <input type="Date" class="form-control bg-secondary-subtle" id="start_date" name="start_date" [(ngModel)]="project.start_date">
+                    </div>
+                    <div class="col-md-6 align-content-end">
+                        <label for="start_time" class="form-label"></label>
+                        <input type="time" class="form-control bg-secondary-subtle" id="start_time" name="start_time" [(ngModel)]="project.start_time">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="source_type" class="form-label">Source type</label>
+                    <select id="source_type" name="source_type" class="form-select bg-secondary-subtle" [(ngModel)]="project.source_type">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="msa_signer" class="form-label">MSA signer</label>
+                    <select id="msa_signer" name="msa_signer" class="form-select bg-secondary-subtle" [(ngModel)]="project.msa_signer">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 row">
+                    <div class="col-md-6 align-content-end">
+                        <label for="end_date" class="form-label">Finish date from:</label>
+                        <input type="Date" class="form-control bg-secondary-subtle" id="end_date" name="end_date" [(ngModel)]="project.end_date">
+                    </div>
+                    <div class="col-md-6 align-content-end">
+                        <label for="end_time" class="form-label"></label>
+                        <input type="time" class="form-control bg-secondary-subtle" id="end_time" name="end_time" [(ngModel)]="project.end_time">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="billing_entity" class="form-label">Billing entity</label>
+                    <select id="billing_entity" name="billing_entity" class="form-select bg-secondary-subtle" [(ngModel)]="project.billing_entity">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="region" class="form-label">Region</label>
+                    <select id="region" name="region" class="form-select bg-secondary-subtle" [(ngModel)]="project.region">
+                        <option hidden selected>Select</option>
+                        <option>Any</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="bg-secondary-subtle rounded">
+                        <mat-label>Accounts</mat-label>
+                        <mat-select id="account" multiple [formControl]="project.account">
+                            <mat-option class="bg-light" [value]="0">Anyone</mat-option>
+                            @for (other of this.users; track other.id) {
+                                @if (other.id !== this.user.id) {
+                                    <mat-option class="bg-light" [value]="other.username"><i class="fa fa-user pe-2"></i>{{ other.username }}</mat-option>
+                                }
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </form>
+            <div class="d-flex flex-column w-25 justify-content-end">
+                <div class="d-flex justify-content-end gap-3">
+                    <button type="submit" class="btn btn-outline-danger w-50"
+                            [disabled]="!project.project_name && !project.short_name && !project.description
+                            && !project.budget_type && !project.status && !project.practice && !project.account.value
+                            && !project.start_date && !project.start_time && !project.source_type && !project. msa_signer
+                            && !project.end_date && !project.end_time && !project.billing_entity && !project.industry
+                            && !project.region" (click)="clear()">Clear</button>
+                    <button type="submit" class="btn btn-success w-50"
+                            [disabled]="!project.project_name || !project.short_name || !project.description
+                            || !project.budget_type || !project.status || !project.practice || !project.account.value
+                            || !project.start_date || !project.start_time || !project.source_type || !project. msa_signer
+                            || !project.end_date || !project.end_time || !project.billing_entity || !project.industry
+                            || !project.region" (click)="search()">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
