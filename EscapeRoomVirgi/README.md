@@ -1,0 +1,1 @@
+Plantilla de Escape Room hecha para una profesora de secundaria que organizó una actividad diferente para sus alumnos, para cambiar la clave secreta, el tiempo limite y el tiempo de penalización por fallo esta en el archivo [script.js](https://github.com/albaboo/Briefcases/blob/main/EscapeRoomVirgi/script.js)
